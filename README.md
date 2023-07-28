@@ -22,18 +22,19 @@ _Web application that allows user to add stylists for their hair salon and add c
   USE \`FirstName_LastName\`;  
 
   CREATE TABLE \`Clients\` (  
-    \`ClientId\` int(11) NOT NULL AUTO_INCREMENT,  
-    \`Name\` varchar(255) DEFAULT NULL,  
-    \`StylistId\` int(11) NOT NULL,  
+    \`ClientId\` int NOT NULL AUTO_INCREMENT,  
+    \`Name\` varchar(45) DEFAULT NULL, 
+    \`Description\` varchar(255) DEFAULT NULL, 
+    \`StylistId\` int NOT NULL,  
     PRIMARY KEY (\`ClientId\`)  
   DELETE CASCADE  
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  
   COLLATE=utf8mb4_0900_ai_ci;
 
   CREATE TABLE \`Stylists\` (  
-    \`StylistId\` int(11) NOT NULL AUTO_INCREMENT,  
-    \`Name\` varchar(255) DEFAULT NULL,  
-    \`Specialty\` varchar(255) DEFAULT NULL,
+    \`StylistId\` int NOT NULL AUTO_INCREMENT,  
+    \`Name\` varchar(45) DEFAULT NULL,  
+    \`Specialty\` varchar(45) DEFAULT NULL,
   PRIMARY KEY (\`StylistId\`)  
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4   COLLATE=utf8mb4_0900_ai_ci;
 

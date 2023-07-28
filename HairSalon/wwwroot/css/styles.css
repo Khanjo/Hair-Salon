@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+h2 {
+    margin-left: 20%;
+}
+
+h3 {
+    margin-left: 20%;
+}
+
+h4 {
+    margin-left: 20%;
+}
+
+ul {
+    margin-left: 30%;
+}
+
+p {
+    text-align: center;
+}
