@@ -17,28 +17,33 @@ _Web application that allows user to add stylists for their hair salon and add c
   5. Import the .sql file into a SQL Manager as a Database. In mySQL Workbench you import from self-contained file and select the .sql file
   6. Make sure your database matches this Schema:  
 
-  DROP DATABASE IF EXISTS \`FirstName_LastName\`;  
-  CREATE DATABASE \`FirstName_LastName\`;  
-  USE \`FirstName_LastName\`;  
+  DROP DATABASE IF EXISTS \`joshua_khan\`;  
+  CREATE DATABASE \`joshua_khan\`;  
+  USE \`joshua_khan\`;  
 
-  CREATE TABLE \`Clients\` (  
-    \`ClientId\` int NOT NULL AUTO_INCREMENT,  
-    \`Name\` varchar(45) DEFAULT NULL, 
-    \`Description\` varchar(255) DEFAULT NULL, 
-    \`StylistId\` int NOT NULL,  
-    PRIMARY KEY (\`ClientId\`)  
-  DELETE CASCADE  
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  
-  COLLATE=utf8mb4_0900_ai_ci;
+  CREATE TABLE `clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT '0',
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-  CREATE TABLE \`Stylists\` (  
-    \`StylistId\` int NOT NULL AUTO_INCREMENT,  
-    \`Name\` varchar(45) DEFAULT NULL,  
-    \`Specialty\` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (\`StylistId\`)  
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4   COLLATE=utf8mb4_0900_ai_ci;
+  CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `Specialty` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-  7. Navigate to the HairSalon directory by entering `cd` **Your Filepath/**`HairSalon`. Then enter `dotnet restore`, `dotnet build`, and `dotnet run` into the terminal.
+  7. Create an appsettings.json file in the HairSalon directory and add the following code:
+  {
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=joshua_khan;uid=root;pwd=`your password`;"
+    }
+  }
+
+  8. Navigate to the HairSalon directory by entering `cd` **Your Filepath/**`HairSalon`. Then enter `dotnet restore`, `dotnet build`, and `dotnet run` into the terminal.
 
 ## Known Bugs
 

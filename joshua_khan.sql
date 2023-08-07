@@ -28,7 +28,7 @@ CREATE TABLE `clients` (
   `Description` varchar(255) DEFAULT NULL,
   `StylistId` int DEFAULT '0',
   PRIMARY KEY (`ClientId`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,'Home',NULL,3),(2,'Grocery',NULL,3),(3,'Grocery',NULL,3),(4,'Home',NULL,3),(5,'Home',NULL,3),(6,'Olivier','CEO of Value Bets Inc.\r\nLikes hair short on the sides and long on top',4);
+INSERT INTO `clients` VALUES (1,'Home',NULL,3),(2,'Grocery',NULL,3),(3,'Grocery',NULL,3),(4,'Home',NULL,3),(5,'Home',NULL,3),(6,'Olivier','CEO of Value Bets Inc.\r\nLikes hair short on the sides and long on top',4),(12,'Sarah','lovely person, tips well',9),(13,'Hanna','Likes simple styles',11);
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ CREATE TABLE `stylists` (
   `Name` varchar(45) DEFAULT NULL,
   `Specialty` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-28 15:28:27
+-- Dump completed on 2023-08-07  3:33:56
